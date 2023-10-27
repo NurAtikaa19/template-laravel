@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -47,4 +49,12 @@ Route::get('/contact', function () {
         "Judul" => "Halaman Contact"
     ]);
 });
+Route::get('/karyawan', function () {
+    $karyawan = DB::table('karyawan')->get();
+
+    return view('karyawan',compact("karyawan")
+  );
+});
+
+
 

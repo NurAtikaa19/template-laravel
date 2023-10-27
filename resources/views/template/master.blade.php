@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | {{$title}}</title>
+    <title>AdminLTE 3 | </title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link rel="stylesheet" href="{{asset('adminLTE')}}/plugins/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -58,7 +58,7 @@
     </ul>
   </nav>
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <a href="/" class="nav-link brand-link {{ ($title === "Home" ? 'active' : "")}}">
+    <a href="/" class="nav-link brand-link">
       <img src="{{asset('adminLTE')}}/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">AdminLTE 3</span>
     </a>
@@ -92,15 +92,21 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-            <a href="/tables" class="nav-link {{ ($title === "Progress Tables" ? : "")}}"> 
+            <a href="/tables" class="nav-link "> 
               <i class="far fa-circle nav-icon"></i>
               <p>Progress Tables</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="/data-tables" class="nav-link {{ ($title === "Data Tables" ? : "")}}" >
+            <a href="/data-tables" class="nav-link " >
               <i class="far fa-circle nav-icon"></i>
               <p>Data Tables</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/karyawan" class="nav-link" >
+              <i class="far fa-circle nav-icon"></i>
+              <p>karyawan</p>
             </a>
           </li>
         </ul>
@@ -114,12 +120,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>{{$title}}</h1>
+            <h1></h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">{{$title}}</a></li>
-              <li class="breadcrumb-item active">{{ $Judul }}</li>
+              <li class="breadcrumb-item"><a href="#"></a></li>
+              <li class="breadcrumb-item active"></li>
             </ol>
           </div>
         </div>
