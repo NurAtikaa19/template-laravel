@@ -104,9 +104,9 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="/karyawan" class="nav-link" >
+            <a href="/cast" class="nav-link" >
               <i class="far fa-circle nav-icon"></i>
-              <p>karyawan</p>
+              <p>cast</p>
             </a>
           </li>
         </ul>

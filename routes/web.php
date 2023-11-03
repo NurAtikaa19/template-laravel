@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DetailCastController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,12 +15,15 @@ use Illuminate\Support\Facades\DB;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('index',[
-        "title" => "Home",
-        "Judul" => "Halaman Home"
-      ]);
-});
+
+
+
+// Route::get('/', function () {
+//     return view('index',[
+//         "title" => "Home",
+//         "Judul" => "Halaman Home"
+//       ]);
+// });
 
 Route::get('/tables', function () {
     return view('tables',[
@@ -49,12 +53,23 @@ Route::get('/contact', function () {
         "Judul" => "Halaman Contact"
     ]);
 });
-Route::get('/karyawan', function () {
-    $karyawan = DB::table('karyawan')->get();
 
-    return view('karyawan',compact("karyawan")
-  );
-});
+// Route::get('/cast', function () {
+//     $cast = DB::table('cast')->get();
+//     return view('cast.cast',compact("cast")
+//     );
+// });
+
+Route::get('/cast', 'App\Http\Controllers\CastController@cast');
+Route::get('/cast/create', 'App\Http\Controllers\CastController@create');
+Route::post('/cast', 'App\Http\Controllers\CastController@store');
+
+Route::get('/cast/edit{id}', 'App\Http\Controllers\CastController@edit');
+Route::patch('/cast{id}', 'App\Http\Controllers\CastController@update');
+
+Route::delete('/cast{id}', 'App\Http\Controllers\CastController@delete');
+
+Route::get('/cast{id}', 'App\Http\Controllers\CastController@show');
 
 
-
+// Route::resource('/cast', DetailCastController::class);
